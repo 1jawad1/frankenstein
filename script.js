@@ -9,6 +9,10 @@ const bar = document.querySelector(".bar")
 
 navOptions.forEach((e, index)=>{
     e.addEventListener('click', ()=>{
+        if(index!=1){
+            bar.style.display = 'none'
+
+        }
 
         navOptions.forEach(e_=>{
             e_.parentElement.style.outline = 'none'
@@ -23,6 +27,8 @@ navOptions.forEach((e, index)=>{
 
 arrows.forEach( (element, index) => {
     element.addEventListener('click', ()=>{
+        bar.style.display = 'none'
+
 
         currentBox = index?currentBox+1:currentBox-1
 
