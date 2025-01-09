@@ -5,6 +5,8 @@ const button = document.querySelector('button')
 let currentBox = 0;
 
 
+const bar = document.querySelector(".bar")
+
 navOptions.forEach((e, index)=>{
     e.addEventListener('click', ()=>{
 
@@ -55,12 +57,21 @@ let num = -1
 document.addEventListener('keydown', (e)=>{
     if(currentBox === 1){
         let num = parseInt(img.getAttribute('src')[img.getAttribute('src').length-5])
-
         if(e.code == 'ArrowLeft' && num > 1){
             img.src =  `assets/story/scene ${num-1}.png`
+            bar.style.display = 'none'
+            num-=1
+            
         }else if(e.code == 'ArrowRight' && num < 8){
             img.src =  `assets/story/scene ${num+1}.png`
+            bar.style.display = 'none'
+            num+=1
         }   
+
+        if(num ===4||num===7||num===8){
+            bar.style.display = 'block'
+        }
+
 }
 
 

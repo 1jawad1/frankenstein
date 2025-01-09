@@ -342,3 +342,15 @@ q{
     flex-direction: column;
     justify-content: space-around;
 }
+
+.bar{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 0.05vw;
+    background-color: white;
+    box-shadow: 2px 1px 10px 2px #000000a6;
+    display: none;
+}
