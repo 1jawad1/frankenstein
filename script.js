@@ -14,7 +14,7 @@ navOptions.forEach((e, index)=>{
 
         currentBox = index
         e.parentElement.style.outline = '1px solid white'
-        container.style.transform =`translateY(-${20*index}%)`
+        container.style.transform =`translateY(-${(100/6)*index}%)`
 
     })
 })
@@ -24,7 +24,7 @@ arrows.forEach( (element, index) => {
 
         currentBox = index?currentBox+1:currentBox-1
 
-        if(currentBox === 5){
+        if(currentBox === 6){
             currentBox = 0
         }else if(currentBox === -1){
             currentBox = 4
@@ -35,7 +35,7 @@ arrows.forEach( (element, index) => {
         })
 
         navOptions[currentBox].parentElement.style.outline = '1px solid white'
-        container.style.transform =`translateY(-${20*currentBox}%)`
+        container.style.transform =`translateY(-${(100/6)*currentBox}%)`
     })
 });
 
@@ -43,7 +43,7 @@ button.addEventListener('click', ()=>{
     currentBox = 1
     navOptions[0].parentElement.style.outline = 'none'
     navOptions[currentBox].parentElement.style.outline = '1px solid white'
-    container.style.transform ='translateY(-20%)'
+    container.style.transform ='translateY(calc(100%/-6))'
 })
 
 
